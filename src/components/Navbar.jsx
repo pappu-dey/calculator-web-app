@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useContext, useEffect, useRef } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import { IconZap, IconSun, IconMoon } from "./Icons";
+import { IconSun, IconMoon } from "./Icons";
 
 const MenuIcon = ({ size = 20 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -108,7 +108,7 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="nav-left">
           <Link to="/" className="logo">
-            <IconZap size={18} /> CalculatorHub
+            <img src={`${process.env.PUBLIC_URL}/calculator.png`} alt="Calculator" className="nav-logo-img" /> CalculatorHub
           </Link>
 
           <div className="nav-links desktop-only">
