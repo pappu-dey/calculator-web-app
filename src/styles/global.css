@@ -867,6 +867,7 @@ body {
 .calc-wrapper {
   max-width: 480px;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 .calc-title {
@@ -1484,6 +1485,41 @@ body {
   margin-bottom: 16px;
 }
 
+/* Individual Calculator SEO Content */
+.seo-content {
+  margin-top: 24px;
+  padding: 24px;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.seo-content h1 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+.seo-content h2 {
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.seo-content p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
 /* ===== STATIC PAGES ===== */
 .static-page-card {
   background: var(--card);
@@ -1597,6 +1633,52 @@ body {
   color: var(--text-secondary);
 }
 
+/* ===== BREADCRUMBS ===== */
+.breadcrumbs-container {
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs-list {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  list-style-type: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  color: var(--text-muted);
+}
+
+.breadcrumb-item a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active span {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: "›";
+  padding: 0 0.5rem;
+  color: var(--border);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   .home-hero {
@@ -1668,13 +1750,20 @@ body {
   }
 
   /* ── Sidebar stacking order on mobile ── */
-  /* 1st: main content, 2nd: Related Tools, 3rd: More Tools */
+  /* 1st: Calculator, 2nd: Related Tools, 3rd: More Tools, 4th: SEO content */
   .page-with-sidebar {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .page-main {
+    display: contents;
+    /* Allows children to be flex items of .page-with-sidebar */
+  }
+
+  .calc-wrapper {
     order: 1;
+    width: 100%;
   }
 
   .related-sidebar {
@@ -1687,6 +1776,11 @@ body {
     order: 3;
     width: 100%;
     position: static;
+  }
+
+  .seo-content {
+    order: 4;
+    width: 100%;
   }
 
   /* ── Sidebars become a vertical table/list on mobile ── */

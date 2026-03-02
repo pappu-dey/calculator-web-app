@@ -1,46 +1,67 @@
 import React from "react";
-import BackButton from "../components/BackButton";
 
+import Breadcrumbs from "../../components/Breadcrumbs";
 export default function PrivacyPolicy() {
     return (
-        <div className="main-content">
-            <div className="container">
-                <BackButton />
+        <div className="main-content"><div className="container">
+            <Breadcrumbs />
+                
                 <div className="static-page-card">
-                    <h1>Privacy Policy</h1>
+                    <h1>Privacy Policy & Disclaimer</h1>
                     <p>Last updated: {new Date().toLocaleDateString()}</p>
+
                     <p>
-                        At Calculator Hub (calculatorhub.online), the privacy of our visitors is of extreme importance to us.
-                        This privacy policy document outlines the types of personal information is received and collected by
-                        Calculator Hub and how it is used.
+                        Welcome to Calculator Hub (calculatorhub.online).
+                        By using this website, you agree to this Privacy Policy and Disclaimer.
                     </p>
 
-                    <h2>Log Files</h2>
+                    <h2>Information Collection</h2>
                     <p>
-                        Like many other Web sites, Calculator Hub makes use of log files. The information inside the log files
-                        includes internet protocol (IP) addresses, type of browser, Internet Service Provider (ISP), date/time
-                        stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user's
-                        movement around the site, and gather demographic information. IP addresses, and other such information
-                        are not linked to any information that is personally identifiable.
+                        Calculator Hub does not collect any personal information from users.
+                        All calculators are free tools meant for general informational purposes only.
                     </p>
 
-                    <h2>Cookies and Web Beacons</h2>
+                    <h2>Use At Your Own Risk</h2>
                     <p>
-                        Calculator Hub does use cookies to store information about visitors' preferences, record user-specific
-                        information on which pages the user access or visit, customize Web page content based on visitors
-                        browser type or other information that the visitor sends via their browser.
+                        All tools and calculators on this website are provided for convenience only.
+                        We do not guarantee accuracy of results.
+                        Users are solely responsible for how they use any results generated.
+                    </p>
+                    <p>
+                        Calculator Hub will not be responsible for any financial loss, health decision,
+                        academic result, or any other outcome based on the use of our tools.
                     </p>
 
-                    <h2>DoubleClick DART Cookie</h2>
-                    <ul>
-                        <li>Third party vendors, including Google, use cookies to serve ads based on a user's prior visits to your website or other websites.</li>
-                        <li>Google's use of advertising cookies enables it and its partners to serve ads to your users based on their visit to your sites and/or other sites on the Internet.</li>
-                        <li>Users may opt out of personalized advertising by visiting Ads Settings.</li>
-                    </ul>
-
+                    <h2>Third-Party Advertisements</h2>
                     <p>
-                        If you require any more information or have any questions about our privacy policy, please feel free
-                        to contact us by email at support@calculatorhub.online.
+                        This website may display advertisements provided by third-party ad networks such as Google.
+                        These ads are not controlled by Calculator Hub.
+                    </p>
+                    <p>
+                        If you click on any advertisement, visit external links, or purchase any product or service,
+                        Calculator Hub is not responsible for any damage, loss, or issue arising from such interaction.
+                    </p>
+
+                    <h2>Cookies</h2>
+                    <p>
+                        Third-party vendors may use cookies to serve ads based on your previous visits
+                        to this or other websites. Calculator Hub has no control over these cookies.
+                    </p>
+
+                    <h2>External Links</h2>
+                    <p>
+                        Our website may contain links to other websites.
+                        We are not responsible for the content, policies, or actions of any third-party websites.
+                    </p>
+
+                    <h2>Consent</h2>
+                    <p>
+                        By using our website, you hereby consent to our Privacy Policy and agree to its terms.
+                    </p>
+
+                    <h2>Contact</h2>
+                    <p>
+                        If you have any questions, contact us at: xtpdev@gmail.com
                     </p>
                 </div>
             </div>

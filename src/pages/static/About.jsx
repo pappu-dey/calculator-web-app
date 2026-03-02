@@ -1,11 +1,11 @@
 import React from "react";
-import BackButton from "../components/BackButton";
 
+import Breadcrumbs from "../../components/Breadcrumbs";
 export default function About() {
     return (
-        <div className="main-content">
-            <div className="container">
-                <BackButton />
+        <div className="main-content"><div className="container">
+            <Breadcrumbs />
+                
                 <div className="static-page-card">
                     <h1>About Calculator Hub</h1>
                     <p>

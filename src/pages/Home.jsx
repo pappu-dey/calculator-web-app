@@ -330,21 +330,33 @@ export default function Home() {
           <p>
             Calculator Hub offers a wide range of free online calculators for finance, health, education and daily needs.
             Our tools are designed to be simple, fast and accurate so that anyone can use them easily.
-            Whether you need an EMI calculator, BMI calculator, percentage calculator or age calculator,
+            Whether you need an <Link to="/finance/emi">EMI Calculator</Link>, <Link to="/health/bmi">BMI Calculator</Link>, <Link to="/math/percentage">Percentage Calculator</Link> or <Link to="/daily/age">Age Calculator</Link>,
             Calculator Hub makes calculations quick and hassle-free.
           </p>
 
           <h2>Popular Calculator Categories</h2>
           <p>
-            We provide multiple categories of calculators including finance calculators for loan and EMI planning,
-            health calculators for BMI and calorie tracking, daily life calculators for age and percentage calculations,
-            and student calculators for academic use.
+            We provide multiple categories of calculators including finance calculators like
+            our <Link to="/finance/emi">EMI Calculator</Link>, <Link to="/finance/sip">SIP Calculator</Link> and <Link to="/finance/gst">GST Calculator</Link> for loan and investment planning.
+            For health tracking, try our <Link to="/health/bmi">BMI Calculator</Link> and <Link to="/health/calorie">Calorie Calculator</Link>.
+            Daily life tools include the <Link to="/daily/age">Age Calculator</Link> and <Link to="/daily/discount">Discount Calculator</Link>.
+            Students can use our <Link to="/college/gpa">GPA Calculator</Link> and <Link to="/college/cgpa">CGPA Calculator</Link> for academic tracking.
+          </p>
+
+          <h2>Unit Converters</h2>
+          <p>
+            Need to convert units quickly? Use our <Link to="/converter/length">Length Converter</Link> for meters to feet,
+            <Link to="/converter/weight"> Weight Converter</Link> for kg to lbs,
+            <Link to="/converter/temperature"> Temperature Converter</Link> for Celsius to Fahrenheit,
+            and <Link to="/converter/speed"> Speed Converter</Link> for km/h to mph.
+            We also offer <Link to="/converter/area">Area</Link>, <Link to="/converter/volume">Volume</Link>, <Link to="/converter/power">Power</Link>, and <Link to="/converter/pressure">Pressure</Link> converters.
           </p>
 
           <h2>Why Use Calculator Hub?</h2>
           <p>
             Our platform is free to use, mobile-friendly and requires no sign-up.
             All tools are optimized for accuracy and speed to give you instant results anytime.
+            Try our <Link to="/math/basic">Basic Calculator</Link> or <Link to="/math/scientific">Scientific Calculator</Link> for quick math right in your browser.
           </p>
         </div>
 

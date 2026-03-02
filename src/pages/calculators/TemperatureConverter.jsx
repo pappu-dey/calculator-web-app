@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import Breadcrumbs from "../../components/Breadcrumbs";
+import FAQSchema from "../../components/FAQSchema";
 import { useSearchParams } from "react-router-dom";
-import BackButton from "../../components/BackButton";
 import { MoreTools, RelatedTools } from "../../components/RelatedTools";
 import CommonConversions from "../../components/CommonConversions";
 
@@ -48,9 +49,9 @@ export default function TemperatureConverter() {
     const handleChipSelect = (f, t) => { setFrom(f); setTo(t); const r = convertTemp(value, f, t); if (r !== null) setResult(r); };
 
     return (
-        <div className="main-content">
-            <div className="container">
-                <BackButton />
+        <div className="main-content"><div className="container">
+            <Breadcrumbs />
+                
                 <div className="page-with-sidebar">
                     <MoreTools />
                     <div className="page-main">
@@ -86,6 +87,44 @@ export default function TemperatureConverter() {
                                 </div>
                             )}
                             <CommonConversions type="temperature" onSelect={handleChipSelect} />
+                        </div>
+
+                        {/* SEO Content */}
+                        <div className="seo-content mt-8">
+                            <h1>Temperature Converter</h1>
+                            <p>
+                                The Temperature Converter is a simple and fast tool to translate temperature degrees between Celsius, Fahrenheit, and Kelvin.
+                                Whether you are checking the weather for an upcoming international trip, cooking a foreign recipe, or conducting scientific research, this tool ensures you always have the correct temperature scale.
+                            </p>
+                            <h2>How it Works</h2>
+                            <p>Select your starting temperature scale and the scale you wish to convert to. Enter your value, and the calculator applies the precise mathematical formula to provide the converted temperature instantly.</p>
+
+                            <h2>Benefits of the Temperature Converter</h2>
+                            <p>It eliminates the need to remember complex conversion formulas like multiplying by 9/5 and adding 32. It works flawlessly on both mobile and desktop browsers.</p>
+
+                            <h2>When to Use</h2>
+                            <p>Use it when traveling between the US (which uses Fahrenheit) and the rest of the world (which uses Celsius), or when baking recipes from international chefs.</p>
+
+                            <h2>Frequently Asked Questions</h2>
+                            <h3>How do I convert Celsius to Fahrenheit?</h3>
+                            <p>Our tool does this automatically! The manual formula is: (°C × 9/5) + 32 = °F.</p>
+
+                            <h3>What is the Kelvin scale?</h3>
+                            <p>Kelvin is the base unit of temperature in the International System of Units (SI), primarily used in scientific equations and astronomy.</p>
+
+                            <h3>Is this tool free?</h3>
+                            <p>Yes, our temperature conversion tool is 100% free with no registration required.</p>
+                        <FAQSchema faqs={[
+    {
+        question: "How do I convert Celsius to Fahrenheit?", answer: "Our tool does this automatically! The manual formula is: (°C × 9/5) + 32 = °F."
+    },
+    {
+        question: "What is the Kelvin scale?", answer: "Kelvin is the base unit of temperature in the International System of Units (SI), primarily used in scientific equations and astronomy."
+    },
+    {
+        question: "Is this tool free?", answer: "Yes, our temperature conversion tool is 100% free with no registration required."
+    }
+]} />
                         </div>
                     </div>
                     <RelatedTools />

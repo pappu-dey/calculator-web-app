@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from "react";
+import Breadcrumbs from "../../components/Breadcrumbs";
+import FAQSchema from "../../components/FAQSchema";
 import { useSearchParams } from "react-router-dom";
-import BackButton from "../../components/BackButton";
 import { MoreTools, RelatedTools } from "../../components/RelatedTools";
 import CommonConversions from "../../components/CommonConversions";
 
@@ -28,7 +29,8 @@ export default function VolumeConverter() {
     const handleChipSelect = (f, t) => { setFrom(f); setTo(t); convert(value, f, t); };
 
     return (
-        <div className="main-content"><div className="container"><BackButton />
+        <div className="main-content"><div className="container">
+            <Breadcrumbs />
             <div className="page-with-sidebar"><MoreTools />
                 <div className="page-main"><div className="calc-wrapper">
                     <h2 className="calc-title">Volume Converter</h2>
@@ -42,7 +44,45 @@ export default function VolumeConverter() {
                     </div>
                     {result !== null && (<div className="result-card"><div className="result-highlight"><div className="big-value">{result}</div><div className="big-label">{to}</div></div></div>)}
                     <CommonConversions type="volume" onSelect={handleChipSelect} />
-                </div></div><RelatedTools />
+                    {/* SEO Content */}
+                    <div className="seo-content mt-8">
+                        <h1>Volume Converter</h1>
+                        <p>
+                            The Volume Converter is an invaluable tool for cooking, baking, engineering, and fluid dynamics.
+                            It easily translates liquid and solid volume capacities between liters, milliliters, gallons, quarts, pints, cups, fluid ounces, and cubic meters.
+                            If you are struggling to follow a recipe from another country or trying to calculate the water capacity of a swimming pool, this calculator has you covered.
+                        </p>
+                        <h2>How it Works</h2>
+                        <p>Select your starting volume unit and the desired output unit from the dropdown lists. Type in the volume, and watch the exact conversion appear on the screen in real-time.</p>
+
+                        <h2>Benefits of the Volume Converter</h2>
+                        <p>It solves the frustration of translating between US Customary fluid measurements and the logical Metric system. It's completely free and available 24/7 without downloading an app.</p>
+
+                        <h2>When to Use</h2>
+                        <p>Use it in the kitchen for international recipes, in the garage when mixing engine fluids, or in science classes for chemistry experiments.</p>
+
+                        <h2>Frequently Asked Questions</h2>
+                        <h3>What is the difference between US fluid ounces and UK fluid ounces?</h3>
+                        <p>Our tool focuses on the standard US Customary fluid conversions to metric, which is the most commonly required translation online.</p>
+
+                        <h3>How many cups are in a liter?</h3>
+                        <p>There are roughly 4.22 US cups in a single liter. Our calculator can show you the exact decimal breakdown.</p>
+
+                        <h3>Is a liquid ounce the same as a weight ounce?</h3>
+                        <p>No, a fluid ounce is a measure of volume (space), while a weight ounce is a measure of mass. They are not interchangeable unless specifically measuring water.</p>
+                    </div>
+                <FAQSchema faqs={[
+    {
+        question: "What is the difference between US fluid ounces and UK fluid ounces?", answer: "Our tool focuses on the standard US Customary fluid conversions to metric, which is the most commonly required translation online."
+    },
+    {
+        question: "How many cups are in a liter?", answer: "There are roughly 4.22 US cups in a single liter. Our calculator can show you the exact decimal breakdown."
+    },
+    {
+        question: "Is a liquid ounce the same as a weight ounce?", answer: "No, a fluid ounce is a measure of volume (space), while a weight ounce is a measure of mass. They are not interchangeable unless specifically measuring water."
+    }
+]} />
+                        </div></div><RelatedTools />
             </div>
         </div></div>
     );

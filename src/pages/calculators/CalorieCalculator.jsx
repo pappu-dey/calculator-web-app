@@ -1,5 +1,6 @@
 import { useState } from "react";
-import BackButton from "../../components/BackButton";
+import Breadcrumbs from "../../components/Breadcrumbs";
+import FAQSchema from "../../components/FAQSchema";
 import { MoreTools, RelatedTools } from "../../components/RelatedTools";
 
 export default function CalorieCalculator() {
@@ -19,9 +20,9 @@ export default function CalorieCalculator() {
     };
 
     return (
-        <div className="main-content">
-            <div className="container">
-                <BackButton />
+        <div className="main-content"><div className="container">
+            <Breadcrumbs />
+                
                 <div className="page-with-sidebar">
                     <MoreTools />
                     <div className="page-main">
@@ -57,6 +58,45 @@ export default function CalorieCalculator() {
                                     <div className="result-row"><span className="label">Weight Gain (+500)</span><span className="value">{result.gain} cal</span></div>
                                 </div>
                             )}
+                        </div>
+
+                        {/* SEO Content */}
+                        <div className="seo-content mt-8">
+                            <h1>Calorie Calculator</h1>
+                            <p>
+                                The Calorie Calculator is an easy-to-use tool to determine how many calories your body needs every day to maintain, lose, or gain weight.
+                                By inputting your age, gender, height, weight, and daily activity level, this calculator provides a highly personalized estimate of your daily caloric needs.
+                                Whether you are a fitness enthusiast aiming to build muscle or someone trying to shed a few pounds, this tool is your first step toward achieving your goals.
+                            </p>
+                            <h2>How it Works</h2>
+                            <p>It uses the globally recognized Mifflin-St Jeor equation to calculate your Basal Metabolic Rate (BMR) and then multiplies it by your selected activity level (from sedentary to very active) to calculate total daily energy expenditure (TDEE).</p>
+
+                            <h2>Benefits of the Calorie Calculator</h2>
+                            <p>It gives you a clear numerical target for your diet instead of guessing. You get precise caloric goals tailored to different objectives, such as a mild weight loss or an aggressive bulk.</p>
+
+                            <h2>When to Use</h2>
+                            <p>Use it when you are starting a new diet plan, hitting a weight-loss plateau, or planning your meals to build muscle through a caloric surplus.</p>
+
+                            <h2>Frequently Asked Questions</h2>
+                            <h3>How accurate is this calorie calculator?</h3>
+                            <p>The Mifflin-St Jeor equation is highly regarded as one of the most accurate metabolic formulas, though individual metabolic rates can vary slightly.</p>
+
+                            <h3>What does "Sedentary" activity level mean?</h3>
+                            <p>It means you get little to no exercise during the week—typically someone who works a desk job and doesn't play sports or go to the gym.</p>
+
+                            <h3>Should I recalculate my calories as I lose weight?</h3>
+                            <p>Yes, as your body weight changes, your required daily calories will also change. We recommend recalculating every 5-10 pounds lost.</p>
+                        <FAQSchema faqs={[
+    {
+        question: "Daily Calorie Needs\r\n                                    BMR (Base Metabolic Rate){result.bmr} cal\r\n                                    Maintenance (TDEE){result.tdee} cal\r\n                                    Weight Loss (-500){result.lose} cal\r\n                                    Weight Gain (+500){result.gain} cal\r\n                                \r\n                            )}\r\n                        \r\n\r\n                        {/* SEO Content */}\r\n                        \r\n                            Calorie Calculator\r\n                            \r\n                                The Calorie Calculator is an easy-to-use tool to determine how many calories your body needs every day to maintain, lose, or gain weight.\r\n                                By inputting your age, gender, height, weight, and daily activity level, this calculator provides a highly personalized estimate of your daily caloric needs.\r\n                                Whether you are a fitness enthusiast aiming to build muscle or someone trying to shed a few pounds, this tool is your first step toward achieving your goals.\r\n                            \r\n                            How it Works\r\n                            It uses the globally recognized Mifflin-St Jeor equation to calculate your Basal Metabolic Rate (BMR) and then multiplies it by your selected activity level (from sedentary to very active) to calculate total daily energy expenditure (TDEE).\r\n\r\n                            Benefits of the Calorie Calculator\r\n                            It gives you a clear numerical target for your diet instead of guessing. You get precise caloric goals tailored to different objectives, such as a mild weight loss or an aggressive bulk.\r\n\r\n                            When to Use\r\n                            Use it when you are starting a new diet plan, hitting a weight-loss plateau, or planning your meals to build muscle through a caloric surplus.\r\n\r\n                            Frequently Asked Questions\r\n                            How accurate is this calorie calculator?", answer: "The Mifflin-St Jeor equation is highly regarded as one of the most accurate metabolic formulas, though individual metabolic rates can vary slightly."
+    },
+    {
+        question: "What does \"Sedentary\" activity level mean?", answer: "It means you get little to no exercise during the week—typically someone who works a desk job and doesn't play sports or go to the gym."
+    },
+    {
+        question: "Should I recalculate my calories as I lose weight?", answer: "Yes, as your body weight changes, your required daily calories will also change. We recommend recalculating every 5-10 pounds lost."
+    }
+]} />
                         </div>
                     </div>
                     <RelatedTools />

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import BackButton from "../../components/BackButton";
+import Breadcrumbs from "../../components/Breadcrumbs";
+import FAQSchema from "../../components/FAQSchema";
 import { MoreTools, RelatedTools } from "../../components/RelatedTools";
 
 export default function DiscountCalculator() {
@@ -18,9 +19,9 @@ export default function DiscountCalculator() {
     const fmt = (n) => n.toLocaleString("en-IN");
 
     return (
-        <div className="main-content">
-            <div className="container">
-                <BackButton />
+        <div className="main-content"><div className="container">
+            <Breadcrumbs />
+                
                 <div className="page-with-sidebar">
                     <MoreTools />
                     <div className="page-main">
@@ -40,6 +41,44 @@ export default function DiscountCalculator() {
                                     <div className="result-row"><span className="label">You Save</span><span className="value">₹{fmt(result.savings)}</span></div>
                                 </div>
                             )}
+                        </div>
+
+                        {/* SEO Content */}
+                        <div className="seo-content mt-8">
+                            <h1>Discount Calculator</h1>
+                            <p>
+                                The Discount Calculator is the ultimate shopping companion that helps you quickly figure out exactly how much money you will save during a sale.
+                                No more guessing if a "25% off" sale is actually a good deal. Simply enter the original price of the item and the discount percentage, and our tool instantly calculates the amount saved and the final price you need to pay at checkout.
+                            </p>
+                            <h2>How it Works</h2>
+                            <p>You supply the original price of the product and the discount rate (in percentage). The calculator works out the math instantly, revealing the discounted price and your total savings.</p>
+
+                            <h2>Benefits of the Discount Calculator</h2>
+                            <p>It helps you budget your shopping trips accurately, preventing surprises at the checkout counter. It works flawlessly on mobile, making it the perfect in-store companion.</p>
+
+                            <h2>When to Use</h2>
+                            <p>Use it during Black Friday, holiday sales, clearance events, or anytime you have a promotional coupon that offers a percentage off your total purchase.</p>
+
+                            <h2>Frequently Asked Questions</h2>
+                            <h3>Can this tool calculate tax as well?</h3>
+                            <p>Currently, this tool focuses purely on the discount. However, you can use our Percentage Calculator or GST Calculator for tax-specific math.</p>
+
+                            <h3>How do I calculate multiple discounts?</h3>
+                            <p>If an item has an additional "10% off the reduced price", simply calculate the first discount, take the new final price, and enter it as the original price for the second calculation.</p>
+
+                            <h3>Is it free to use on my phone while shopping?</h3>
+                            <p>Yes, it is 100% free, requires no app downloads, and loads ultra-fast on mobile browsers instantly in the store.</p>
+                        <FAQSchema faqs={[
+    {
+        question: "Can this tool calculate tax as well?", answer: "Currently, this tool focuses purely on the discount. However, you can use our Percentage Calculator or GST Calculator for tax-specific math."
+    },
+    {
+        question: "How do I calculate multiple discounts?", answer: "If an item has an additional \"10% off the reduced price\", simply calculate the first discount, take the new final price, and enter it as the original price for the second calculation."
+    },
+    {
+        question: "Is it free to use on my phone while shopping?", answer: "Yes, it is 100% free, requires no app downloads, and loads ultra-fast on mobile browsers instantly in the store."
+    }
+]} />
                         </div>
                     </div>
                     <RelatedTools />

@@ -1,11 +1,11 @@
 import React from "react";
-import BackButton from "../components/BackButton";
 
+import Breadcrumbs from "../../components/Breadcrumbs";
 export default function Contact() {
     return (
-        <div className="main-content">
-            <div className="container">
-                <BackButton />
+        <div className="main-content"><div className="container">
+            <Breadcrumbs />
+                
                 <div className="static-page-card">
                     <h1>Contact Us</h1>
                     <p>
@@ -13,7 +13,7 @@ export default function Contact() {
                         or suggestions for new calculators, please reach out to us.
                     </p>
                     <p>
-                        <strong>Email:</strong> support@calculatorhub.online
+                        <strong>Email:</strong> xtpdev@gmail.com
                     </p>
                     <p>
                         We aim to respond to all inquiries within 24-48 hours. Thank you for using Calculator Hub!

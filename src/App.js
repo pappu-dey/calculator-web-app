@@ -33,13 +33,17 @@ import NumberSystemConverter from "./pages/calculators/NumberSystemConverter";
 import SGPAConverter from "./pages/calculators/SGPAConverter";
 import CGPAPercentageConverter from "./pages/calculators/CGPAPercentageConverter";
 import AreaConverter from "./pages/calculators/AreaConverter";
+import VolumeConverter from "./pages/calculators/VolumeConverter";
 import TimeConverter from "./pages/calculators/TimeConverter";
 import PowerConverter from "./pages/calculators/PowerConverter";
 import PressureConverter from "./pages/calculators/PressureConverter";
 
+import KgToGram from "./pages/seo/KgToGram";
+
 import About from "./pages/static/About";
 import Contact from "./pages/static/Contact";
 import PrivacyPolicy from "./pages/static/PrivacyPolicy";
+import TermsAndConditions from "./pages/static/TermsAndConditions";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -97,14 +101,20 @@ function App() {
         <Route path="/converter/number-system" element={<NumberSystemConverter />} />
         <Route path="/converter/sgpa" element={<SGPAConverter />} />
         <Route path="/converter/cgpa-percentage" element={<CGPAPercentageConverter />} />
+        <Route path="/converter/area" element={<AreaConverter />} />
+        <Route path="/converter/volume" element={<VolumeConverter />} />
         <Route path="/converter/time" element={<TimeConverter />} />
         <Route path="/converter/power" element={<PowerConverter />} />
         <Route path="/converter/pressure" element={<PressureConverter />} />
+
+        {/* SEO Micro Pages */}
+        <Route path="/converter/kg-to-gram" element={<KgToGram />} />
 
         {/* Static Pages */}
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       </Routes>
 
       <Footer />

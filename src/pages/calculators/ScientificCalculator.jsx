@@ -1,5 +1,6 @@
 import { useState } from "react";
-import BackButton from "../../components/BackButton";
+import Breadcrumbs from "../../components/Breadcrumbs";
+import FAQSchema from "../../components/FAQSchema";
 import { MoreTools, RelatedTools } from "../../components/RelatedTools";
 
 export default function ScientificCalculator() {
@@ -221,9 +222,9 @@ export default function ScientificCalculator() {
     const gridClass = mode === "scientific" ? "calc-grid scientific" : "calc-grid";
 
     return (
-        <div className="main-content">
-            <div className="container">
-                <BackButton />
+        <div className="main-content"><div className="container">
+            <Breadcrumbs />
+                
                 <div className="page-with-sidebar">
                     <MoreTools />
                     <div className="page-main">
@@ -242,6 +243,46 @@ export default function ScientificCalculator() {
                                     <button key={i} className={`calc-btn ${btn.className || ""}`} onClick={btn.action}>{btn.label}</button>
                                 ))}
                             </div>
+                        </div>
+
+                        {/* SEO Content */}
+                        <div className="seo-content mt-8">
+                            <h1>Scientific Calculator</h1>
+                            <p>
+                                Our free Scientific Calculator provides advanced mathematical functions beyond basic arithmetic.
+                                It is perfect for high school students, college students, engineers, and scientists who need to solve complex equations quickly.
+                                This tool includes trigonometric functions (sin, cos, tan), logarithms, exponentiation, square roots, factorials, and constants like Pi (π) and Euler's number (e).
+                                You can use it right in your browser without the need for an expensive physical device, making advanced math accessible to everyone.
+                            </p>
+                            <h2>How it Works</h2>
+                            <p>Enter your expression using the advanced function keys or standard numbers, and the calculator evaluates the entire equation instantly. It handles complex operations automatically while following the standard order of operations.</p>
+
+                            <h2>Benefits of the Scientific Calculator</h2>
+                            <p>It saves you money on physical calculators and is available anywhere you have an internet connection. The layout is optimized for quick technical computations.</p>
+
+                            <h2>When to Use</h2>
+                            <p>Use this tool when working on algebra, calculus, physics, engineering problems, or any advanced mathematical assignments.</p>
+
+                            <h2>Frequently Asked Questions</h2>
+                            <h3>Does the scientific calculator support Trigonometry?</h3>
+                            <p>Yes, it includes sine (sin), cosine (cos), and tangent (tan) functions for all your geometry and trigonometry needs.</p>
+
+                            <h3>Is this calculator suitable for college exams?</h3>
+                            <p>It is excellent for studying and homework! However, you should check your specific exam rules to see if mobile devices or online calculators are permitted.</p>
+
+                            <h3>Are factorials and exponents included?</h3>
+                            <p>Yes, you can easily calculate factorials (x!) and use exponents/powers right from our interface.</p>
+                        <FAQSchema faqs={[
+    {
+        question: "Does the scientific calculator support Trigonometry?", answer: "Yes, it includes sine (sin), cosine (cos), and tangent (tan) functions for all your geometry and trigonometry needs."
+    },
+    {
+        question: "Is this calculator suitable for college exams?", answer: "It is excellent for studying and homework! However, you should check your specific exam rules to see if mobile devices or online calculators are permitted."
+    },
+    {
+        question: "Are factorials and exponents included?", answer: "Yes, you can easily calculate factorials (x!) and use exponents/powers right from our interface."
+    }
+]} />
                         </div>
                     </div>
                     <RelatedTools />

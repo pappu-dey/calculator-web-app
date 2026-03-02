@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BackButton from "../../components/BackButton";
+import Breadcrumbs from "../../components/Breadcrumbs";
 import { MoreTools, RelatedTools } from "../../components/RelatedTools";
 
 export default function BMICalculator() {
@@ -21,9 +21,9 @@ export default function BMICalculator() {
     };
 
     return (
-        <div className="main-content">
-            <div className="container">
-                <BackButton />
+        <div className="main-content"><div className="container">
+            <Breadcrumbs />
+                
                 <div className="page-with-sidebar">
                     <MoreTools />
                     <div className="page-main">
@@ -51,6 +51,19 @@ export default function BMICalculator() {
                                     </div>
                                 </div>
                             )}
+                        </div>
+
+                        {/* SEO Content for Individual Calculator */}
+                        <div className="seo-content mt-8">
+                            <h1>BMI Calculator</h1>
+                            <p>
+                                The BMI Calculator helps you check whether your body weight is healthy based on your height and weight.
+                                It is a simple and fast tool useful for daily health monitoring.
+                            </p>
+                            <h2>Why Use BMI Calculator?</h2>
+                            <p>
+                                It helps you understand if you are underweight, normal, overweight or obese.
+                            </p>
                         </div>
                     </div>
                     <RelatedTools />
