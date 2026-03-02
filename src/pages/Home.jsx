@@ -323,6 +323,31 @@ export default function Home() {
             )}
           </div>
         </div>
+
+        {/* --- SEO CONTENT SECTION --- */}
+        <div className="home-seo-content">
+          <h1>Free Online Calculator Tools</h1>
+          <p>
+            Calculator Hub offers a wide range of free online calculators for finance, health, education and daily needs.
+            Our tools are designed to be simple, fast and accurate so that anyone can use them easily.
+            Whether you need an EMI calculator, BMI calculator, percentage calculator or age calculator,
+            Calculator Hub makes calculations quick and hassle-free.
+          </p>
+
+          <h2>Popular Calculator Categories</h2>
+          <p>
+            We provide multiple categories of calculators including finance calculators for loan and EMI planning,
+            health calculators for BMI and calorie tracking, daily life calculators for age and percentage calculations,
+            and student calculators for academic use.
+          </p>
+
+          <h2>Why Use Calculator Hub?</h2>
+          <p>
+            Our platform is free to use, mobile-friendly and requires no sign-up.
+            All tools are optimized for accuracy and speed to give you instant results anytime.
+          </p>
+        </div>
+
       </div>
     </div>
   );

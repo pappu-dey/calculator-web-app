@@ -108,6 +108,20 @@ export default function Footer() {
                     </div>
                 </div>
 
+                <div className="footer-section" id="legal">
+                    <h2 className="footer-section-title">Calculator Hub</h2>
+                    <div className="footer-columns">
+                        <div className="footer-col">
+                            <h3 className="footer-col-title">Company</h3>
+                            <ul className="footer-links">
+                                <li><Link to="/about">About Us</Link></li>
+                                <li><Link to="/contact">Contact</Link></li>
+                                <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="footer-bottom">
                     <p>CalculatorHub &mdash; Free Online Calculators &amp; Converters</p>
                 </div>
